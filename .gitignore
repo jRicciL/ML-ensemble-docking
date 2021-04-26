@@ -1,0 +1,11 @@
+1_Download_and_prepare_protein_ensembles/pdb_structures/*
+**.sdf
+**.mol2
+**.DS_Store
+.vscode/settings.json
+**checkpoint.ipynb
+**.log
+**.ipynb_checkpoints
+3_Protein_Ensembles_Analysis/PDB_402_cdk2_PISANI_ALL.pdb
+**__pycache__
+/3_Protein_Ensembles_Analysis/POVME3_results/*/res_frameInfo
