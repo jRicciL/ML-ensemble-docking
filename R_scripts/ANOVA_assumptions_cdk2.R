@@ -49,14 +49,14 @@ do_RM_ANOVA <- function(csv_file, metric_colname='roc_auc') {
 # Perform the analysis
 
 # CDK2
-cdk2_file = './Documents/Doctorado/Proteinas_modelo/ML-Ensemble-Docking/CDK2/ANALISIS/8_Paper_Results_generation/cv30x4_cdk2.csv'
+cdk2_file = '../cdk2/5_Machine_Learning/cv30x4_cdk2.csv'
 ## ROC
 res.aov.cdk2.roc <- do_RM_ANOVA(csv_file = cdk2_file, metric_colname = 'roc_auc')
 ## NEF
 res.aov.cdk2.nef <- do_RM_ANOVA(csv_file = cdk2_file, metric_colname = 'nef_12_Ra')
 
 # FXa
-cdk2_file = './Documents/Doctorado/Proteinas_modelo/ML-Ensemble-Docking/CDK2/ANALISIS/8_Paper_Results_generation/cv30x4_fxa.csv'
+cdk2_file = '../fxa/5_Machine_Learning/cv30x4_fxa.csv'
 ## ROC
 res.aov.fxa.roc <- do_RM_ANOVA(csv_file = cdk2_file, metric_colname = 'roc_auc')
 ## NEF
