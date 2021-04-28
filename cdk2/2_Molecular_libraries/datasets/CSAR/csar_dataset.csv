@@ -1,0 +1,112 @@
+,Compound_ID,Data Source,Target,SMILES,Chemical Series,"Experimental Result, Average Value Operator","Experimental Result, Average Value","Experimental Result, SEM","Experimental Result, Type","Experimental Result, Unit","Experimental Result, Protocol","Experimental Result, comment",PDB ID,LIGAND ID,ActiveInactive,activity
+0,CS1,UnivMichigan,CDK2 Kinase,Brc1ccc(cc1)C(=O)Nc1n[nH]c(c1)C CS1,1.0,,33200,7040.0,Kd,nM,OctetRed_Method1,,4EK4,,Active,1
+1,CS2,UnivMichigan,CDK2 Kinase,O=C(Nc1n[nH]c(c1)C1CC1)CCC CS2,1.0,,1840,368.0,Kd,nM,OctetRed_Method1,,,,Active,1
+2,CS3,UnivMichigan,CDK2 Kinase,O=C(Nc1n[nH]c(c1)C1CC1)c1ccc(cc1)C(=O)N CS3,1.0,,808,114.0,Kd,nM,OctetRed_Method1,,4EK5,,Active,1
+3,CS4,UnivMichigan,CDK2 Kinase,O=C(Nc1n[nH]c(c1)C1CC1)c1ccc(cc1)C(=O)[O-] CS4,1.0,,21200,4570.0,Kd,nM,OctetRed_Method1,,4FKG,,Active,1
+4,CS5,UnivMichigan,CDK2 Kinase,Brc1ccc(cc1)C(=O)Nc1n[nH]c(c1)C1CCCCC1 CS5,1.0,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+5,CS9,UnivMichigan,CDK2 Kinase,FC(F)(F)Oc1ccc(cc1)CC(=O)Nc1n[nH]c(c1)C1CC1 CS9,1.0,,58300,44500.0,Kd,nM,OctetRed_Method1,,4FKI,,Active,1
+6,CS10,UnivMichigan,CDK2 Kinase,s1cccc1-c1ccc(cc1)CC(=O)Nc1n[nH]c(c1)C1CC1 CS10,1.0,,910,227.0,Kd,nM,OctetRed_Method1,,4EK6,,Active,1
+7,CS11,UnivMichigan,CDK2 Kinase,O(CC[NH+]1CCCC1)c1ccc(cc1)CC(=O)Nc1[nH]nc(c1)C1CC1 CS11,1.0,,280,60.9,Kd,nM,OctetRed_Method1,,4FJK,,Active,1
+8,CS12,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)N)c(nc1C)C CS12,2.0,,ND,,Kd,nM,OctetRed_Method1,Too much error,4FKL,,Active,1
+9,CS13,UnivMichigan,CDK2 Kinase,Cc1c(c2ccnc(Nc3ccc(Cl)cc3)n2)sc(C)n1 CS13,2.0,,965,537.0,Kd,nM,OctetRed_Method1,,,,Active,1
+10,CS14,UnivMichigan,CDK2 Kinase,FC(C=C1)=CC=C1NC2=NC=CC(C3=C(C)N=C(C)S3)=N2 CS14,2.0,,1430,638.0,Kd,nM,OctetRed_Method1,,,,Active,1
+11,CS15,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)Nc2cc(ccc2)C#N)c(nc1C)C CS15,2.0,,557,404.0,Kd,nM,OctetRed_Method1,,,,Active,1
+12,CS16,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)Nc2cc([N+](=O)[O-])ccc2)c(nc1C)C CS16,2.0,,77.3,35.7,Kd,nM,OctetRed_Method1,,4EK8,,Active,1
+13,CS17,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)Nc2cc([N+](=O)[O-])ccc2)c(nc1NCC=C)C CS17,2.0,,53.9,20.7,Kd,nM,OctetRed_Method1,,,,Active,1
+14,CS18,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)Nc2ccc(N(C)C)cc2)c(nc1N)C CS18,2.0,,961,230.0,Kd,nM,OctetRed_Method1,,3SW4,,Active,1
+15,CS19,UnivMichigan,CDK2 Kinase,s1c(-c2nc(ncc2)Nc2cc([N+](=O)[O-])c(N(C)C)cc2)c(nc1C)C CS19,2.0,,229,69.4,Kd,nM,OctetRed_Method1,,3SW7,,Active,1
+16,CS20,UnivMichigan,CDK2 Kinase,Clc1cc(Nc2nc(ccn2)-c2sc(nc2C)C)ccc1N(C)C CS20,2.0,,777,450.0,Kd,nM,OctetRed_Method1,,4FKO,,Active,1
+17,CS241,UnivMichigan,CDK2 Kinase,S(=O)(=O)(NC(N)=N)c1ccc(N\C=C/2\c3c(NC\2=O)cccc3)cc1 CS241,3.0,,287,35.1,Kd,nM,OctetRed_Method1,,4FKP,,Active,1
+18,CS242,UnivMichigan,CDK2 Kinase,S(=O)(=O)(N)c1ccc(N\N=C/2\c3c(NC\2=O)ccc2[nH]nnc23)cc1 CS242,3.0,,528,158.0,Kd,nM,OctetRed_Method1,,4FKQ,,Active,1
+19,CS244,UnivMichigan,CDK2 Kinase,s1c2c\3c(NC(=O)/C/3=C\Nc3ccc(S(=O)(=O)Nc4c(OC)cccc4OC)cc3)ccc2nc1 CS244,3.0,,179,72.2,Kd,nM,OctetRed_Method1,,,,Active,1
+20,CS245,UnivMichigan,CDK2 Kinase,s1c2c\3c(NC(=O)/C/3=C\Nc3cc4c(CS(=O)(=O)C4)cc3)ccc2nc1 CS245,3.0,,229,79.1,Kd,nM,OctetRed_Method1,,4FKR,,Active,1
+21,CS246,UnivMichigan,CDK2 Kinase,s1c2c\3c(NC(=O)/C/3=C\Nc3ccc(S(=O)([O-])=NC(=O)C)cc3)ccc2nc1 CS246,3.0,,526,102.0,Kd,nM,OctetRed_Method1,,4FKS,,Active,1
+22,CS247,UnivMichigan,CDK2 Kinase,S(=O)(=O)(N)c1ccc(N\N=C/2\c3cc(ccc3NC\2=O)C(=O)NCc2c(OC)cccc2OC)cc1 CS247,3.0,,22.6,0.96,Kd,nM,OctetRed_Method1,,,,Active,1
+23,CS248,UnivMichigan,CDK2 Kinase,S(=O)(=O)(NCC[NH+](C)C)c1ccc(N\C=C/2\c3c(NC\2=O)cccc3)cc1 CS248,3.0,,1060,227.0,Kd,nM,OctetRed_Method1,,4FKT,,Active,1
+24,CS260,UnivMichigan,CDK2 Kinase,O=C(/C1=N\NC2=CC=C(S(=O)(N)=O)C=C2)NC3=C1C=C(C(O)=O)C=C3 CS260,3.0,,98.6,1.95,Kd,nM,OctetRed_Method1,,4FKU,,Active,1
+25,CS261,UnivMichigan,CDK2 Kinase,O=C(/C1=N\NC2=CC=C(S(=O)(N)=O)C=C2)NC3=C1C=C(C(NCCC4=CNC=N4)=O)C=C3 CS261,3.0,,251,30.5,Kd,nM,OctetRed_Method1,,4FKV,,Active,1
+26,CS262,UnivMichigan,CDK2 Kinase,O=C(/C1=N\NC2=CC=C(S(=O)(N)=O)C=C2)NC3=C1C=C(C(OCC(C)C)=O)C=C3 CS262,3.0,,47.3,11.3,Kd,nM,OctetRed_Method1,,4FKW,,Active,1
+27,CS27,UnivMichigan,CDK2 Kinase,O(c1cc(ccc1)NC(=O)CSC1=NN=NN1C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+28,CS32,UnivMichigan,CDK2 Kinase,n1c2c(ccc1)ccc(c2O)C(NC(=O)C)Cc1cc(c(cc1)OC)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+29,CS33,UnivMichigan,CDK2 Kinase,n1ccccc1SCCNS(=O)(=O)c1ccc(cc1)Br,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+30,CS36,UnivMichigan,CDK2 Kinase,O(c1ccc(cc1)OCC(=O)Nc1c(ccc(c1)C1=NN2C(=NN=C2S1)C)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+31,CS37,UnivMichigan,CDK2 Kinase,S1C=C(c2ccc(cc2)C)N2C1=NN=C2SCCC(=O)Nc1ccc(cc1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+32,CS38,UnivMichigan,CDK2 Kinase,COC(C1=CC=CC=C1NC(CSC2=NN=C(C3(C4)C[C@H]5C[C@@H]4C[C@H](C5)C3)N2C)=O)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+33,CS41,UnivMichigan,CDK2 Kinase,N(c1ccc(cc1)OC)C(=O)CSC1=NN=C(N1)c1ccncc1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+34,CS47,UnivMichigan,CDK2 Kinase,CN1C(SCC(NC2=CC(Cl)=C(OC)C=C2OC)=O)=NN=C1C3=CC=CC=C3,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+35,CS49,UnivMichigan,CDK2 Kinase,O(c1ccc2c(c1)SC(=N2)SCC(=O)NC1=C(N(N(C1=O)c1ccccc1)C)C)CC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+36,CS53,UnivMichigan,CDK2 Kinase,N1(C)N=NN=C1SCC(=O)Nc1ccc(cc1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+37,CS55,UnivMichigan,CDK2 Kinase,O=C(C)C1=CC=C(C(CC2=C(O)N=C(N)N=C2O)=C1)OCC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+38,CS58,UnivMichigan,CDK2 Kinase,O=[N+]([O-])C1=CC=C(C=C1)C(N2C3=CC=CC=C3)=NN=C2SCC(N4CCOCC4)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+39,CS59,UnivMichigan,CDK2 Kinase,N1(C)C(=NN=C1SCC(=O)Nc1ccc(cc1)C(=O)OC)c1ccc(cc1)NC(=O)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+40,CS64,UnivMichigan,CDK2 Kinase,N1(C)C(=NN=C1SCC(=O)N)COc1cccc2c1nccc2,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+41,CS66,UnivMichigan,CDK2 Kinase,N(c1cc(ccc1)C(=O)C)C(=O)CSC1=NN=C(N1CC)c1ccncc1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+42,CS67,UnivMichigan,CDK2 Kinase,N1(c2ccccc2)C(=NN=C1c1cc(c(cc1)OC)OC)SCC(=O)c1ccc(cc1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+43,CS68,UnivMichigan,CDK2 Kinase,N1(c2ccccc2)N(C(=C(C1=O)NC(=O)C1N(CCC1)S(=O)(=O)c1ccccc1)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+44,CS69,UnivMichigan,CDK2 Kinase,O=C(N)C(C=C1)=CC([N+]([O-])=O)=C1NCCCN2CCOCC2,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+45,CS71,UnivMichigan,CDK2 Kinase,N1(C)C(=NN=C1SCC(=O)Nc1ccc(cc1)C(=O)C)c1cccc(c1)NC(=O)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+46,CS72,UnivMichigan,CDK2 Kinase,O(C(=O)c1c(cccc1)NC(=O)CSC1=NN=C(N1C)c1ccc(cc1)OC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+47,CS73,UnivMichigan,CDK2 Kinase,COC1=CC=C(C=C1)N2C(SCC(N)=O)=NN=C2C3=CC=CS3,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+48,CS74,UnivMichigan,CDK2 Kinase,O=S(C1=CC=C(NC(CSC2=NN=C(C3=CC=CC=C3F)N2C4=CC=CC=C4)=O)C=C1)(C)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+49,CS76,UnivMichigan,CDK2 Kinase,O=S(N(C1=C(C(N2CCN(C)CC2)=O)C=CC=C1)CC3=CC=CC=C3)(C)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+50,CS77,UnivMichigan,CDK2 Kinase,N1(c2c(cccc2)OC)N=NN=C1SCC(=O)Nc1ccc(cc1)C(=O)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+51,CS78,UnivMichigan,CDK2 Kinase,O=C(Nc1c(cc(cc1F)F)Br)CSC1=NN=C(N1C)c1ccc(cc1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+52,CS80,UnivMichigan,CDK2 Kinase,OCCNC1=NC2=CC=CC=C2N1CC(C3=CC=CC([N+]([O-])=O)=C3)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+53,CS81,UnivMichigan,CDK2 Kinase,N(c1c(cc(cc1C)C)C)C(=O)CSC1=NN=NN1c1cc(ccc1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+54,CS82,UnivMichigan,CDK2 Kinase,[O-][N+](C(C=C1)=CC=C1C2=NN=C(SCC(NC3=C(OC)C=CC=C3)=O)N2C4=CC=CC=C4)=O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+55,CS85,UnivMichigan,CDK2 Kinase,n1cc(ccc1)C(=O)Nc1cc(ccc1OC)NC(=O)C1=CC=CO1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+56,CS92,UnivMichigan,CDK2 Kinase,O(C(=O)c1c(cccc1)Oc1nc(nc(n1)NC(C)C)NC(C)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+57,CS95,UnivMichigan,CDK2 Kinase,S(C1=NN=C(N1CC)c1ccncc1)CC(=O)Nc1cccc(c1)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+58,CS96,UnivMichigan,CDK2 Kinase,O(c1cc(c(cc1Cl)NC(=O)CSC1=NN=C(N1C)c1ccncc1)OC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+59,CS98,UnivMichigan,CDK2 Kinase,O(c1c(cccc1)NC(=O)CSC1=NN=C(N1C)c1ccc(cc1)F)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+60,CS100,UnivMichigan,CDK2 Kinase,CC1=CC=C(S(=O)(NC2=C(CNC3=CN=C(C=CC=C4)C4=C3)C=CC=C2)=O)C=C1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+61,CS102,UnivMichigan,CDK2 Kinase,[N+](=O)(c1cccc(c1)C1=NN(C(=O)c2c1cccc2)CC(=O)NCC1OCCC1)[O-],,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+62,CS104,UnivMichigan,CDK2 Kinase,n1ccccc1CNS(=O)(=O)c1c(cc(c(c1)Cl)Cl)Cl,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+63,CS105,UnivMichigan,CDK2 Kinase,S(=O)(=O)(c1cc(c(cc1C)C)C)NCc1ncccc1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+64,CS109,UnivMichigan,CDK2 Kinase,Clc1c(cc(c(c1)NC(=O)CSC1=NN=C(N1c1ccccc1)c1ccncc1)OC)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+65,CS110,UnivMichigan,CDK2 Kinase,Oc(c(C1=NN=C(SCC(Nc2cc(C(C)=O)ccc2)=O)N1C)c3)cc4c3cccc4,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+66,CS112,UnivMichigan,CDK2 Kinase,COC1=CC=C(C(C(C)OC2=CC=CC(NC(C3=CC=CC([N+](O)=O)=C3)=O)=C2)=O)C=C1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+67,CS115,UnivMichigan,CDK2 Kinase,n1c(c2c(nc1Nc1nc(cc(n1)C)O)cc(cc2)OC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+68,CS116,UnivMichigan,CDK2 Kinase,n1c(cccc1)CNS(=O)(=O)c1ccc(c(c1Cl)Cl)Cl,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+69,CS119,UnivMichigan,CDK2 Kinase,N1(CC)C(=NN=C1SCC(=O)Nc1ccccc1OC)C1=CC=CO1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+70,CS29,UnivMichigan,CDK2 Kinase,N1=C(c2ccncc2)OC(=N1)SCc1cc(ccc1)C(=O)O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+71,CS31,UnivMichigan,CDK2 Kinase,N(c1ccc(cc1)S(=O)(=O)NC1=NN=C(S1)CC)C(=O)c1ccc(cc1)F,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+72,CS34,UnivMichigan,CDK2 Kinase,OC(=O)c1ccc(cc1)NC(=O)c1cc(ccc1Cl)S(=O)(=O)N1CCC(CC1)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+73,CS46,UnivMichigan,CDK2 Kinase,O=C(COc1c([N+]([O-])=O)cccc1)Nc2c(N3CCOCC3)cccc2,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+74,CS65,UnivMichigan,CDK2 Kinase,FC(c1cc(c(cc1)Cl)N(CC(=O)N1CCN(CC1)C)S(=O)(=O)c1ccccc1)(F)F,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+75,CS70,UnivMichigan,CDK2 Kinase,N(c1ccc(cc1)S(=O)(=O)NC1=C(N(c2ccccc2)N=C1C)C)C(=O)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+76,CS93,UnivMichigan,CDK2 Kinase,Clc1cccc(c1C(=O)Nc1ccc(cc1)S(=O)(=O)Nc1ncccn1)Cl,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+77,CS130,UnivMichigan,CDK2 Kinase,Brc1ccc(cc1)S(=O)(=O)CN(CC(=O)Nc1c(cccc1)C(=O)N1CCCC1)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+78,CS140,UnivMichigan,CDK2 Kinase,N1=C(Nc2ccccc21)SC(C)C(=O)Nc1ccc(cc1)S(=O)(=O)N,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+79,CS142,UnivMichigan,CDK2 Kinase,N1(CCOCC1)CC(=O)Nc1c(cc(cc1)[N+](=O)[O-])OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+80,CS148,UnivMichigan,CDK2 Kinase,[N+](=O)(c1cccc(c1)C1=NOC(=N1)CCCN1C(=O)c2c(cccc2)C1=O)[O-],,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+81,CS150,UnivMichigan,CDK2 Kinase,N1(c2ccccc2)N(C(=C(C1=O)NS(=O)(=O)C1=CC=CC2=NON=C12)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+82,CS152,UnivMichigan,CDK2 Kinase,N1(CCC(CC1)C(=O)N)C(=O)CN(C)S(=O)(=O)c1c(cc(cc1C)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+83,CS154,UnivMichigan,CDK2 Kinase,N1(c2ccccc2CCC1)C(=O)CN1C=CC(=N1)[N+](=O)[O-],,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+84,CS160,UnivMichigan,CDK2 Kinase,N1(CCOCC1)C(=O)c1ccccc1NC(=O)CN(c1ccc(cc1)Cl)S(=O)(=O)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+85,CS165,UnivMichigan,CDK2 Kinase,n1cc(cc(c1)Br)C(=O)Nc1ccc(cc1)S(=O)(=O)Nc1nccc(n1)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+86,CS166,UnivMichigan,CDK2 Kinase,Oc1ccccc1C1=NN=C(N1c1ccccc1)SCC(=O)Nc1cccc(c1)C(=O)O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+87,CS169,UnivMichigan,CDK2 Kinase,O(c1cccc(c1)C1=NN=C(N1C)SCC(=O)Nc1ccccc1CC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+88,CS173,UnivMichigan,CDK2 Kinase,N1(CCN(CC1)C)C(=O)CN(C)S(=O)(=O)c1cc2c(cc1)cccc2,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+89,CS175,UnivMichigan,CDK2 Kinase,O(c1cc(cc(c1OC)OC)C1=NN=C(N1C)SCC(=O)N)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+90,CS177,UnivMichigan,CDK2 Kinase,O=[N+]([O-])c1cc(NC(C(C)Oc2c(C)cccc2)=O)c(OC)cc1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+91,CS184,UnivMichigan,CDK2 Kinase,O(c1c(cccc1)CNC(=O)CSC1=NN=NN1c1c(cccc1C)C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+92,CS188,UnivMichigan,CDK2 Kinase,N1=C(Cc2ccccc2)N(C(=N1)Sc1ccc(cc1C(=O)N1CCOCC1)[N+](=O)[O-])C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+93,CS189,UnivMichigan,CDK2 Kinase,O1CCN(CC1)CC(=O)Nc1c(cc(cc1)OC)[N+](=O)[O-],,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+94,CS196,UnivMichigan,CDK2 Kinase,O1c2c(cccc2)N=C1Nc1ncc(c(n1)CN1CCN(c2ccccc2)CC1)C(=O)OCC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+95,CS197,UnivMichigan,CDK2 Kinase,O(c1ccccc1N1N=NN=C1SCC(=O)Nc1ccccc1SC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+96,CS198,UnivMichigan,CDK2 Kinase,O(c1ccccc1NC(=O)CSC1=NN=CN1C)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+97,CS200,UnivMichigan,CDK2 Kinase,O1CCN(c2ccc(cc2Cl)NC(=O)CN2N=C([N+](=O)[O-])N=C2)CC1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+98,CS202,UnivMichigan,CDK2 Kinase,O(c1c(c(cc(c1)NC(=O)CSC1=NN=CN1C)OC)OC)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+99,CS204,UnivMichigan,CDK2 Kinase,O1CCN(c2cc(c(cc2)[N+](=O)[O-])NCCOC2=NON=C2C)CC1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+100,CS208,UnivMichigan,CDK2 Kinase,O1c2c(cc(cc2)NC(=O)CC2OCCN(C2=O)Cc2ccccc2)OCC1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+101,CS209,UnivMichigan,CDK2 Kinase,N1(CCOCC1)C(=O)c1ccccc1NC(=O)Cc1ccccc1[N+](=O)[O-],,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+102,CS213,UnivMichigan,CDK2 Kinase,O(c1c(cccc1)NC(=O)CSC1=NN=C(N1CC)C1=CNc2c1cccc2)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+103,CS222,UnivMichigan,CDK2 Kinase,O(c1c(cccc1)NC(=O)CSC1=NN=C(N1c1ccccc1)c1ccccc1Cl)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+104,CS230,UnivMichigan,CDK2 Kinase,S(c1ccc(cc1)S(=O)(=O)NCc1ccccn1)C,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+105,CS231,UnivMichigan,CDK2 Kinase,O=C(c1c(cccc1)OC1=NC(=NN1C)[N+](=O)[O-])N1CCOCC1,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+106,CS232,UnivMichigan,CDK2 Kinase,N(c1cc(ccc1)C)S(=O)(=O)c1c(ccc(c1)C(=O)Nc1c(cccc1)C(=O)N1CCOCC1)Cl,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+107,CS234,UnivMichigan,CDK2 Kinase,n1ccc(cc1)C1=NN=C(O1)SCC(=O)Nc1ccc(cc1)F,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+108,CS236,UnivMichigan,CDK2 Kinase,Clc1ccc(cc1Cl)NC(=O)NCCC1=CNc2ccc(cc21)OC,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+109,CS237,UnivMichigan,CDK2 Kinase,Brc1ccc(cc1)S(=O)(=O)NC1=C(N2N=CN=C2N=C1C)O,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
+110,CS238,UnivMichigan,CDK2 Kinase,N(c1c(cc(cc1)C)C)S(=O)(=O)c1c(ccc(c1)C(=O)Nc1c(cccc1)C(=O)N1CCOCC1)Cl,,>,100000,,Kd,nM,OctetRed_Method1,,,,Inactive,0
