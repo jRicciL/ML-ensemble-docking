@@ -14,3 +14,6 @@ cdk2/2_Molecular_libraries/datasets/DEKOIS2/CDK2_Celling-v1.12_decoyset.sdf.gz
 .gitignore
 cdk2/2_Molecular_libraries/datasets/DUD/allDUDfiles_Gasteiger.tar.gz
 cdk2/2_Molecular_libraries/temp
+cdk2/2_Molecular_libraries/datasets/DEKOIS2/CDK2.sdf.gz
+cdk2/2_Molecular_libraries/datasets/DEKOIS2/mol2/dekis2_ligs.tar
+cdk2/2_Molecular_libraries/rdkit_fingerprints_all_libraries_no_duplicates.obj
