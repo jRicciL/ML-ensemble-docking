@@ -1,5 +1,6 @@
 library(extrafont)
 library(ggthemes)
+library(ggsci)
 library(plyr)
 library(tidyr)
 library(dplyr)
@@ -137,24 +138,28 @@ plot_lines <- function(df, cbbPalette=cbbPalette, y_label='AUC-ROC', y_min=0.4, 
                        line_size=1, point_size=2.2, error_dodge=0.05, error_width=1.5, error_size=1, 
                        legend.position='none', shape=21, add_ribbon=FALSE, ribbon_alpha=0.2, title.size=11,
                        ticks.text.size=8, ticks.text.angle=0, 
-                       base_h_line=0.5, x_label="Percentage of shuffled labels (%)", title='') {
+                       base_h_line=0.5, x_label="Percentage of shuffled labels (%)", title='',
+                       include_color_scale = TRUE) {
 
     ggplot(data = df, 
            mapping = aes(x = index, 
                          y = mean, 
-                         color = method)) + 
+                         color = selection)) + 
         geom_hline(yintercept= base_h_line, 
                    linetype="dashed", color="#333333") +
         geom_line(size=line_size, alpha=0.7) + 
         # theme(text=element_text(family="Trebuchet MS")) + 
         {if(switch_x)scale_x_reverse()} +
         geom_errorbar(aes(ymin=mean-std, ymax=mean+std), width=error_width, size=error_size, position=position_dodge(error_dodge)) +
-        {if(add_ribbon) geom_ribbon(aes(ymin=mean-std, ymax=mean+std, fill=method), alpha=ribbon_alpha, colour=NA)} +
+        {if(add_ribbon) geom_ribbon(aes(ymin=mean-std, ymax=mean+std, fill=selection), alpha=ribbon_alpha, colour=NA)} +
         # geom_point(color='black', size = point_size + 0.6, stroke = 0.5, shape=shape)+
-        geom_point(aes(fill=method), colour='black', size = point_size, stroke = 0.4, shape=shape)+
+        geom_point(aes(fill=selection), colour='black', size = point_size, stroke = 0.4, shape=shape)+
         ggtitle(title) +
         scale_y_continuous(breaks = seq(y_min, y_max, 0.1), limits = c(y_min, y_max)) + 
-        theme(legend.position = legend.position, panel.border = element_rect(colour = "black", fill=NA, size=0.6),
+        theme(legend.position = legend.position, 
+              legend.title=element_text(size=8),
+              legend.text=element_text(size=7),
+              panel.border = element_rect(colour = "black", fill=NA, size=0.6),
               panel.background = element_rect(fill = "white",
                                     colour = "white",
                                     size = 0.6, linetype = "solid"),
@@ -166,7 +171,9 @@ plot_lines <- function(df, cbbPalette=cbbPalette, y_label='AUC-ROC', y_min=0.4, 
               panel.grid.minor.x = element_blank(),
               plot.title = element_text(hjust = 0.5, size=title.size)
              ) + 
-                  labs(x = x_label, y = y_label) +
-        scale_color_manual(values=rev(cbbPalette), name='method') +
-        scale_fill_manual(values=rev(cbbPalette), name='method') 
+        labs(x = x_label, y = y_label) +
+        {if(include_color_scale) 
+        scale_color_manual(values=rev(cbbPalette), name='selection')} +
+        {if(include_color_scale) 
+        scale_fill_manual(values=rev(cbbPalette), name='selection')}
     }

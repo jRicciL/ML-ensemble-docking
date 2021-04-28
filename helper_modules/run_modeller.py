@@ -4,7 +4,7 @@ from prody import parsePDB, writePDB
 from Bio import pairwise2, SeqIO
 from modeller import *
 from modeller.automodel import *
-from find_gaps import *
+from helper_modules.find_gaps import *
 from glob import glob
 
 
