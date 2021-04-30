@@ -1,5 +1,7 @@
 # Improving Structure-Based Virtual Screening with Ensemble Docking and Machine Learning
 
+This repository includes the python and R scripts required to reproduce the results and figures of the research study. Main datasets are also included. 
+
 ## 👥 Authors 
 
 - **Joel Ricci-López**: 
@@ -11,13 +13,11 @@
 - **Carlos A. Brizuela**:
   - *CICESE Research Center, Ensenada, México*
 
-## About this repository
+## 🗂 About this repository
 
-This repository includes the jupyter notebooks, and python and R scripts required to reproduce the results and figures of the research study. Main datasets are also included.
+### 🐍 Conda environment with python libraries
 
-### Conda environment with python libraries
-
-Create a conda environment from the `conda_environment.yml` file. This will install all the used libraries used for this study.
+Create a conda environment from the `conda_environment.yml` file. This will install all the python libraries and additional tools used for this study.
 ```shell
 conda env create -f conda_environment.yml
 ```
