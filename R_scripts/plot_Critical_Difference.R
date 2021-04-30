@@ -21,7 +21,7 @@ getNemenyiCD <- function (alpha = 0.05, num.alg, num.problems) {
   return(cd)
 }
 
-plotCD_color <- function (results.matrix, alpha=0.05, cex=0.75, colPalette=cbbPalette, 
+plot_Critical_Difference_color <- function (results.matrix, alpha=0.05, cex=0.75, colPalette=cbbPalette, 
             side_marging=0, line.spacing=0.9, labels.cex=0.6, ...) {
   
   opar <- par(mai = c(0,0,0,0))
