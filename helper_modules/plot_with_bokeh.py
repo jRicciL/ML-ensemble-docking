@@ -6,9 +6,7 @@ from bokeh.models import ColumnDataSource, CDSView, GroupFilter, \
 from bokeh.layouts import row, column
 from bokeh.transform import factor_cmap, factor_mark
 
-# ************************
-# Plot Dimentional Reduction with bokeh
-# ************************
+
 # Vertical line
 vline = Span(location=0, dimension='height', 
              line_color='black', line_width=2, line_alpha=0.5, line_dash='dashed')
