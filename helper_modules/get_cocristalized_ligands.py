@@ -6,13 +6,14 @@ import numpy as np
 
 class PocketResidues:
 
-    def __init__(self, pdb_id, ligand_resname):
+    def __init__(self, pdb_id, ligand_resname, chain = 'A'):
         self.pdb_id = pdb_id
+        self.chain = chain
         self.ligand_resname = ligand_resname
         # Load the molecule
         self.system = parsePDB(pdb_id)
-        self.protein = self.system.select('protein')
-        self.ligand  = self.system.select(f'resname {ligand_resname}')
+        self.protein = self.system.select(f'protein and chain {self.chain}')
+        self.ligand  = self.system.select(f'resname {ligand_resname} and chain {self.chain}')
         assert self.ligand is not None
         # List of residues
         self.pocket_res_list = None
@@ -28,7 +29,8 @@ class PocketResidues:
         '''
 
         pocket_sel = self.system.select(
-                        f'within 7 of resname {self.ligand_resname} and protein')
+                        f'within 7 of resname {self.ligand_resname} ' + \
+                        f'and protein and chain {self.chain}')
         pocket_residues = [str(i) 
                         for i in np.unique(
                             pocket_sel.getResnums())
