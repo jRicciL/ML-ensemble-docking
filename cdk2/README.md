@@ -1,1 +1,1 @@
-# CDK2 notebooks
+# CDK2 jupyter notebooks
