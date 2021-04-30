@@ -6,8 +6,11 @@ plot_cMDS <- function(df) {
     #' A simple function to project a cMSD plot (scatter plot) 
     #' highlighting the top 16 RFE conformations
     #'
-    #' @parm df: A dataframe with the following columns 
-    #' `rfe_ranking`, `x`, `y`, `volume` 
+    #' @Parms
+    #'      df: A dataframe with the following columns 
+    #'          `rfe_ranking`, `x`, `y`, `volume` 
+    #' @Retuns
+    #'      A ggplot2 scatter plot
     
     top_16 <- 16
     p = ggplot() +

@@ -5,16 +5,18 @@ full_names <- c('LR', 'GBT', 'DClf', 'csAVG', 'csGEO', 'csMIN')
 cbbPalette <- c( '#785EF0', '#3F93D2', '#44AA99', '#FE6100', '#DC267F', '#FFB000')
 names(cbbPalette) <- full_names
 
-getNemenyiCD <- function (alpha = 0.05, num.alg, num.problems) {
-  # Auxiliar function to compute the critical difference for Nemenyi test
-  # Args:
-  #   alpha:        Alpha for the test
-  #   num.alg:      Number of algorithms tested
-  #   num.problems: Number of problems where the algorithms have been tested
-  #
-  # Returns:
-  #   Corresponding critical difference
-  #
+getNemenyiCD <- function (alpha = 0.05, 
+                          num.alg, 
+                          num.problems) {
+  #' Auxiliar function to compute the critical difference for Nemenyi test
+  #' @Parms:
+  #'   alpha:        Alpha for the test
+  #'   num.alg:      Number of algorithms tested
+  #'   num.problems: Number of problems where the algorithms have been tested
+  #'
+  #' @Returns:
+  #'   Corresponding critical difference
+  
   df <- num.alg * (num.problems - 1)
   qa <- qtukey(p=1 - alpha, nmeans=num.alg, df=df)/sqrt(2)
   cd <- qa * sqrt((num.alg * (num.alg + 1)) / (6 * num.problems))

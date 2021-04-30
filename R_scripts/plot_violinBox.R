@@ -9,15 +9,15 @@ library(scales)
 library(matrixStats)
 library(tidyverse)
 
+# initialize some variables
 theme_set(theme_gray(base_size = 10))
-
 full_names <- c('LR', 'GBT', 'DClf', 'csAVG', 'csGEO', 'csMIN')
 cbbPalette <- c( '#785EF0', '#3F93D2', '#44AA99', '#FE6100', '#DC267F', '#FFB000')
 names(cbbPalette) <- full_names
-
 lb <- function(x) { median(x) - 1.57*IQR(x)/sqrt(length(x)) }
 ub <- function(x) { median(x) + 1.57*IQR(x)/sqrt(length(x)) }
 
+# Plot
 plot_swarm_box <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_label='AUC-ROC', 
                            y_min=0.4, y_max=1, dot_size=8, bin_width=0.001, base_h_line=0.5) {
     
@@ -68,7 +68,7 @@ plot_swarm_box <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE,
       scale_fill_manual(values=cbbPalette)
 }
 
-plot_violin<- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_label='AUC-ROC', scale='area',
+plot_violin <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_label='AUC-ROC', scale='area',
                            y_min=0.4, y_max=1, dot_size=8, bin_width=0.001, base_h_line=0.5,
                            violin_width=1.1) {
     
