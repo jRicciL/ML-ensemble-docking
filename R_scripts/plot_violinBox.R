@@ -137,12 +137,12 @@ add_ref_values <- function(text, value, color='#888888', y_add=0.02, x=0.5, size
 plot_lines <- function(df, cbbPalette=cbbPalette, y_label='AUC-ROC', y_min=0.4, y_max=1, switch_x=TRUE, 
                        line_size=1, point_size=2.2, error_dodge=0.05, error_width=1.5, error_size=1, 
                        legend.position='none', shape=21, add_ribbon=FALSE, ribbon_alpha=0.2, title.size=11,
-                       ticks.text.size=8, ticks.text.angle=0, 
+                       ticks.text.size=8, ticks.text.angle=0, color_column = 'selection',
                        base_h_line=0.5, x_label="Percentage of shuffled labels (%)", title='',
                        include_color_scale = TRUE) {
-
-    ggplot(data = df, 
-           mapping = aes(x = index, 
+	df %>% 
+	rename_('selection' = color_column) %>%
+    ggplot(mapping = aes(x = index, 
                          y = mean, 
                          color = selection)) + 
         geom_hline(yintercept= base_h_line, 
