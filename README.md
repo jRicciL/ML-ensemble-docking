@@ -1,6 +1,7 @@
 # Improving Structure-Based Virtual Screening with Ensemble Docking and Machine Learning
 
-This repository includes the python and R scripts required to reproduce the results and figures of the research study. Main datasets are also included. 
+This repository includes the python and R scripts required to reproduce the results and figures of the research study. 
+**Main datasets and results are also included**. 
 
 ## 👥 Authors 
 
