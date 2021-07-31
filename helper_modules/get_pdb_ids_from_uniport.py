@@ -1,7 +1,8 @@
 import requests
+import json
 from bs4 import BeautifulSoup
 from prody import parsePDB
-from typing import Tuple
+from typing import Tuple, List
 import pandas as pd
 from Bio import pairwise2, SeqIO
 import time
@@ -98,3 +99,75 @@ def pdb_ids_from_uniprot(uniprot_id: str,
     return result_df
 
 
+def get_useful_pdbids(df_pdb_ids: pd.DataFrame, 
+                      positions: List, 
+                      thr_tol: Tuple = (3, 3)) -> pd.DataFrame:
+    '''
+    For each pdb id in the table, 
+    select those with the correct range of aa given by the
+    `positions` list. Additionaly, a tolerance value, given
+    by the `thr_tol` parameter, allows to increase the range
+    of positions.
+    '''
+    df_ids = df_pdb_ids.query(
+        f'start <= {positions[0] + thr_tol[0]} and end >= {positions[-1] - thr_tol[1]}'
+    )
+    return df_ids
+
+
+def get_bounded_ligands(pdb_id: str, 
+                        entity_id: int = 1) -> List:
+    '''
+    Given a valid `pdb_id` and an entity number (`entity_d`)
+    this function returns the names of the cocristalized ligands.
+    '''   
+    URL = f'https://www.ebi.ac.uk/pdbe/graph-api/pdbe_pages/binding_sites/{pdb_id}/{entity_id}'
+    r = requests.get(URL)
+    ligands_names = []  
+    try:
+        content = json.loads(r.content)[pdb_id]
+        ligands_data = content['data']
+        for lig in ligands_data:
+            lig_name = lig['accession']
+            ligands_names.append(lig_name)
+    except KeyError as err:
+        None
+    return ligands_names
+
+
+def get_pdb_sequence(pdb_id: str, 
+                        entity_id: int = 1) -> List:
+    '''
+    Given a valid `pdb_id` and an entity number (`entity_d`)
+    this function returns the sequence of the protein entity
+    '''  
+    URL = f'https://www.ebi.ac.uk/pdbe/graph-api/pdbe_pages/uniprot_mapping/{pdb_id}/{entity_id}'
+    r = requests.get(URL)
+    try:
+        content = json.loads(r.content)[pdb_id]
+        sequence = content['sequence']
+    except KeyError as err:
+        None
+    return sequence
+
+
+def get_identity(seq1: str, 
+                 seq2: str, 
+                 gap_char: str = '-') -> float:
+    '''
+    Computes the identity value between two protein sequences
+    '''
+    if not len(seq1) == len(seq2):
+        return 0
+    full_len = len(seq1)
+    min_len = min(len(seq1.strip(gap_char)), len(seq2.strip(gap_char)))
+    counter = 0
+    for i, j in zip(seq1, seq2):
+        if i == gap_char or j == gap_char:
+            continue
+        else:
+            i == j
+            counter += 1
+    identity = counter / min_len
+        
+    return identity
