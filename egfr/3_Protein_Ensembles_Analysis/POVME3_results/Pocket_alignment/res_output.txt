@@ -1,0 +1,568 @@
+
+If you use POVME in your research, please cite the following reference:
+  Durrant, J. D., C. A. de Oliveira, et al. (2011). "POVME: An algorithm
+  for measuring binding-pocket volumes." J Mol Graph Model 29(5): 773-776.
+
+Parameters:
+	OUTPUTFILENAMEPREFIX: EGFR-POCKET-RESIDUES_align/res_
+	POINTSINCLUDEREGIONS: sphere at (-43.0, -6.0, 2.0), radius = 14.0
+	NUMFRAMES: -1
+	OutputFrameFilenamePrefix: EGFR-POCKET-RESIDUES_align/res_frameInfo/res_
+	MAXGROWITERATIONS: 10000000000.0
+	GRIDSPACING: 1.0
+	NUMPROCESSORS: 2
+	CONTIGUOUSPOCKETSEEDREGIONS: sphere at (-43.0, -6.0, 2.0), radius = 4.0
+	DISTANCECUTOFF: 1.09
+	COMPRESSOUTPUT: False
+	PDBFILENAME: ../../PDB_175_egfr_POCKET_ALL.pdb
+	CONVEXHULLEXCLUSION: first
+	SAVEREGIONS: False
+	CONTIGUOUSPOINTSCRITERIA: 3
+	OUTPUTBASENAME: res_
+
+Reading frames from ../../PDB_175_egfr_POCKET_ALL.pdb
+	Further processing frame 1
+	Further processing frame 2
+	Further processing frame 3
+	Further processing frame 4
+	Further processing frame 5
+	Further processing frame 6
+	Further processing frame 7
+	Further processing frame 8
+	Further processing frame 9
+	Further processing frame 10
+	Further processing frame 11
+	Further processing frame 12
+	Further processing frame 13
+	Further processing frame 14
+	Further processing frame 15
+	Further processing frame 16
+	Further processing frame 17
+	Further processing frame 18
+	Further processing frame 19
+	Further processing frame 20
+	Further processing frame 21
+	Further processing frame 22
+	Further processing frame 23
+	Further processing frame 24
+	Further processing frame 25
+	Further processing frame 26
+	Further processing frame 27
+	Further processing frame 28
+	Further processing frame 29
+	Further processing frame 30
+	Further processing frame 31
+	Further processing frame 32
+	Further processing frame 33
+	Further processing frame 34
+	Further processing frame 35
+	Further processing frame 36
+	Further processing frame 37
+	Further processing frame 38
+	Further processing frame 39
+	Further processing frame 40
+	Further processing frame 41
+	Further processing frame 42
+	Further processing frame 43
+	Further processing frame 44
+	Further processing frame 45
+	Further processing frame 46
+	Further processing frame 47
+	Further processing frame 48
+	Further processing frame 49
+	Further processing frame 50
+	Further processing frame 51
+	Further processing frame 52
+	Further processing frame 53
+	Further processing frame 54
+	Further processing frame 55
+	Further processing frame 56
+	Further processing frame 57
+	Further processing frame 58
+	Further processing frame 59
+	Further processing frame 60
+	Further processing frame 61
+	Further processing frame 62
+	Further processing frame 63
+	Further processing frame 64
+	Further processing frame 65
+	Further processing frame 66
+	Further processing frame 67
+	Further processing frame 68
+	Further processing frame 70
+	Further processing frame 69
+	Further processing frame 71
+	Further processing frame 72
+	Further processing frame 74
+	Further processing frame 73
+	Further processing frame 76
+	Further processing frame 75
+	Further processing frame 77
+	Further processing frame 78
+	Further processing frame 79
+	Further processing frame 80
+	Further processing frame 81
+	Further processing frame 82
+	Further processing frame 83
+	Further processing frame 84
+	Further processing frame 85
+	Further processing frame 86
+	Further processing frame 87
+	Further processing frame 88
+	Further processing frame 89
+	Further processing frame 90
+	Further processing frame 91
+	Further processing frame 92
+	Further processing frame 93
+	Further processing frame 94
+	Further processing frame 95
+	Further processing frame 96
+	Further processing frame 98
+	Further processing frame 97
+	Further processing frame 100
+	Further processing frame 99
+	Further processing frame 101
+	Further processing frame 102
+	Further processing frame 103
+	Further processing frame 104
+	Further processing frame 105
+	Further processing frame 106
+	Further processing frame 107
+	Further processing frame 108
+	Further processing frame 109
+	Further processing frame 110
+	Further processing frame 111
+	Further processing frame 112
+	Further processing frame 113
+	Further processing frame 114
+	Further processing frame 115
+	Further processing frame 116
+	Further processing frame 117
+	Further processing frame 118
+	Further processing frame 119
+	Further processing frame 120
+	Further processing frame 121
+	Further processing frame 122
+	Further processing frame 123
+	Further processing frame 124
+	Further processing frame 125
+	Further processing frame 126
+	Further processing frame 127
+	Further processing frame 128
+	Further processing frame 129
+	Further processing frame 130
+	Further processing frame 131
+	Further processing frame 132
+	Further processing frame 133
+	Further processing frame 134
+	Further processing frame 135
+	Further processing frame 136
+	Further processing frame 137
+	Further processing frame 138
+	Further processing frame 139
+	Further processing frame 140
+	Further processing frame 141
+	Further processing frame 142
+	Further processing frame 143
+	Further processing frame 144
+	Further processing frame 145
+	Further processing frame 146
+	Further processing frame 147
+	Further processing frame 148
+	Further processing frame 149
+	Further processing frame 150
+	Further processing frame 151
+	Further processing frame 152
+	Further processing frame 153
+	Further processing frame 154
+	Further processing frame 155
+	Further processing frame 156
+	Further processing frame 157
+	Further processing frame 158
+	Further processing frame 159
+	Further processing frame 160
+	Further processing frame 161
+	Further processing frame 162
+	Further processing frame 163
+	Further processing frame 164
+	Further processing frame 165
+	Further processing frame 166
+	Further processing frame 167
+	Further processing frame 168
+	Further processing frame 169
+	Further processing frame 170
+	Further processing frame 171
+	Further processing frame 172
+	Further processing frame 173
+	Further processing frame 174
+	Further processing frame 175
+
+
+Generating the pocket-encompassing point field
+
+Saving the point field as a PDB and NPY file
+	Point field saved to EGFR-POCKET-RESIDUES_align/res_frameInfo/res_inclusion.pdb to permit visualization
+	Point field saved to EGFR-POCKET-RESIDUES_align/res_frameInfo/res_inclusion.npy to optionally load for the volume calculation
+
+
+Saving the contiguous-pocket seed points as a PDB and NPY file
+	Contiguous-pocket seed points saved to EGFR-POCKET-RESIDUES_align/res_frameInfo/res_seed.pdb to permit visualization
+	Point field saved to EGFR-POCKET-RESIDUES_align/res_frameInfo/res_seed.npy to optionally load for the volume calculation
+
+Calculating the pocket volume of each frame
+	Frame 2:  Volume 1189.0 A^3  Surf. A. 799.0 A^2
+	Frame 4:  Volume 1588.0 A^3  Surf. A. 1042.0 A^2
+	Frame 6:  Volume 1536.0 A^3  Surf. A. 976.0 A^2
+	Frame 8:  Volume 1129.0 A^3  Surf. A. 1033.0 A^2
+	Frame 10:  Volume 1021.0 A^3  Surf. A. 724.0 A^2
+	Frame 12:  Volume 1133.0 A^3  Surf. A. 701.0 A^2
+	Frame 14:  Volume 1404.0 A^3  Surf. A. 875.0 A^2
+	Frame 16:  Volume 1352.0 A^3  Surf. A. 737.0 A^2
+	Frame 18:  Volume 1069.0 A^3  Surf. A. 784.0 A^2
+	Frame 20:  Volume 1145.0 A^3  Surf. A. 856.0 A^2
+	Frame 22:  Volume 1128.0 A^3  Surf. A. 762.0 A^2
+	Frame 24:  Volume 1024.0 A^3  Surf. A. 766.0 A^2
+	Frame 26:  Volume 571.0 A^3  Surf. A. 541.0 A^2
+	Frame 28:  Volume 1190.0 A^3  Surf. A. 1011.0 A^2
+	Frame 30:  Volume 593.0 A^3  Surf. A. 495.0 A^2
+	Frame 32:  Volume 1003.0 A^3  Surf. A. 976.0 A^2
+	Frame 34:  Volume 1120.0 A^3  Surf. A. 1182.0 A^2
+	Frame 36:  Volume 1193.0 A^3  Surf. A. 1032.0 A^2
+	Frame 38:  Volume 1420.0 A^3  Surf. A. 762.0 A^2
+	Frame 40:  Volume 1463.0 A^3  Surf. A. 765.0 A^2
+	Frame 42:  Volume 1483.0 A^3  Surf. A. 803.0 A^2
+	Frame 44:  Volume 857.0 A^3  Surf. A. 711.0 A^2
+	Frame 46:  Volume 670.0 A^3  Surf. A. 559.0 A^2
+	Frame 48:  Volume 1307.0 A^3  Surf. A. 1026.0 A^2
+	Frame 50:  Volume 1043.0 A^3  Surf. A. 940.0 A^2
+	Frame 52:  Volume 846.0 A^3  Surf. A. 768.0 A^2
+	Frame 54:  Volume 581.0 A^3  Surf. A. 580.0 A^2
+	Frame 56:  Volume 1050.0 A^3  Surf. A. 699.0 A^2
+	Frame 58:  Volume 1085.0 A^3  Surf. A. 755.0 A^2
+	Frame 60:  Volume 884.0 A^3  Surf. A. 586.0 A^2
+	Frame 62:  Volume 1554.0 A^3  Surf. A. 799.0 A^2
+	Frame 64:  Volume 1052.0 A^3  Surf. A. 663.0 A^2
+	Frame 66:  Volume 1043.0 A^3  Surf. A. 711.0 A^2
+	Frame 68:  Volume 1249.0 A^3  Surf. A. 717.0 A^2
+	Frame 70:  Volume 1060.0 A^3  Surf. A. 707.0 A^2
+	Frame 72:  Volume 1061.0 A^3  Surf. A. 762.0 A^2
+	Frame 74:  Volume 637.0 A^3  Surf. A. 565.0 A^2
+	Frame 76:  Volume 1206.0 A^3  Surf. A. 699.0 A^2
+	Frame 78:  Volume 1285.0 A^3  Surf. A. 722.0 A^2
+	Frame 80:  Volume 1108.0 A^3  Surf. A. 761.0 A^2
+	Frame 82:  Volume 1091.0 A^3  Surf. A. 698.0 A^2
+	Frame 84:  Volume 1239.0 A^3  Surf. A. 726.0 A^2
+	Frame 86:  Volume 1161.0 A^3  Surf. A. 767.0 A^2
+	Frame 88:  Volume 1096.0 A^3  Surf. A. 987.0 A^2
+	Frame 90:  Volume 1565.0 A^3  Surf. A. 744.0 A^2
+	Frame 92:  Volume 1304.0 A^3  Surf. A. 785.0 A^2
+	Frame 94:  Volume 1265.0 A^3  Surf. A. 780.0 A^2
+	Frame 96:  Volume 954.0 A^3  Surf. A. 685.0 A^2
+	Frame 98:  Volume 1045.0 A^3  Surf. A. 687.0 A^2
+	Frame 100:  Volume 1109.0 A^3  Surf. A. 745.0 A^2
+	Frame 102:  Volume 1548.0 A^3  Surf. A. 985.0 A^2
+	Frame 104:  Volume 534.0 A^3  Surf. A. 532.0 A^2
+	Frame 106:  Volume 916.0 A^3  Surf. A. 717.0 A^2
+	Frame 108:  Volume 921.0 A^3  Surf. A. 690.0 A^2
+	Frame 110:  Volume 1289.0 A^3  Surf. A. 1242.0 A^2
+	Frame 112:  Volume 1372.0 A^3  Surf. A. 1243.0 A^2
+	Frame 114:  Volume 888.0 A^3  Surf. A. 734.0 A^2
+	Frame 116:  Volume 1316.0 A^3  Surf. A. 989.0 A^2
+	Frame 118:  Volume 1059.0 A^3  Surf. A. 887.0 A^2
+	Frame 120:  Volume 1292.0 A^3  Surf. A. 1162.0 A^2
+	Frame 122:  Volume 1016.0 A^3  Surf. A. 892.0 A^2
+	Frame 124:  Volume 1030.0 A^3  Surf. A. 966.0 A^2
+	Frame 126:  Volume 583.0 A^3  Surf. A. 555.0 A^2
+	Frame 128:  Volume 1272.0 A^3  Surf. A. 752.0 A^2
+	Frame 130:  Volume 1183.0 A^3  Surf. A. 735.0 A^2
+	Frame 134:  Volume 856.0 A^3  Surf. A. 664.0 A^2
+	Frame 132:  Volume 1337.0 A^3  Surf. A. 884.0 A^2
+	Frame 138:  Volume 1404.0 A^3  Surf. A. 738.0 A^2
+	Frame 136:  Volume 1345.0 A^3  Surf. A. 787.0 A^2
+	Frame 140:  Volume 1361.0 A^3  Surf. A. 718.0 A^2
+	Frame 142:  Volume 1364.0 A^3  Surf. A. 1076.0 A^2
+	Frame 144:  Volume 1498.0 A^3  Surf. A. 801.0 A^2
+	Frame 146:  Volume 881.0 A^3  Surf. A. 663.0 A^2
+	Frame 150:  Volume 585.0 A^3  Surf. A. 551.0 A^2
+	Frame 148:  Volume 1076.0 A^3  Surf. A. 962.0 A^2
+	Frame 154:  Volume 1014.0 A^3  Surf. A. 675.0 A^2
+	Frame 152:  Volume 1204.0 A^3  Surf. A. 1112.0 A^2
+	Frame 158:  Volume 744.0 A^3  Surf. A. 618.0 A^2
+	Frame 156:  Volume 838.0 A^3  Surf. A. 706.0 A^2
+	Frame 162:  Volume 1278.0 A^3  Surf. A. 1229.0 A^2
+	Frame 160:  Volume 1089.0 A^3  Surf. A. 904.0 A^2
+	Frame 166:  Volume 961.0 A^3  Surf. A. 909.0 A^2
+	Frame 164:  Volume 960.0 A^3  Surf. A. 770.0 A^2
+	Frame 168:  Volume 566.0 A^3  Surf. A. 549.0 A^2
+	Frame 170:  Volume 1260.0 A^3  Surf. A. 1012.0 A^2
+	Frame 172:  Volume 1220.0 A^3  Surf. A. 740.0 A^2
+	Frame 174:  Volume 809.0 A^3  Surf. A. 656.0 A^2
+	Frame 1:  Volume 1100.0 A^3  Surf. A. 759.0 A^2
+	Frame 3:  Volume 922.0 A^3  Surf. A. 924.0 A^2
+	Frame 5:  Volume 1439.0 A^3  Surf. A. 1077.0 A^2
+	Frame 7:  Volume 1223.0 A^3  Surf. A. 816.0 A^2
+	Frame 9:  Volume 1197.0 A^3  Surf. A. 730.0 A^2
+	Frame 11:  Volume 1026.0 A^3  Surf. A. 681.0 A^2
+	Frame 13:  Volume 1072.0 A^3  Surf. A. 718.0 A^2
+	Frame 15:  Volume 1086.0 A^3  Surf. A. 716.0 A^2
+	Frame 17:  Volume 1169.0 A^3  Surf. A. 686.0 A^2
+	Frame 19:  Volume 1097.0 A^3  Surf. A. 690.0 A^2
+	Frame 21:  Volume 861.0 A^3  Surf. A. 696.0 A^2
+	Frame 23:  Volume 1362.0 A^3  Surf. A. 1027.0 A^2
+	Frame 25:  Volume 601.0 A^3  Surf. A. 609.0 A^2
+	Frame 27:  Volume 980.0 A^3  Surf. A. 983.0 A^2
+	Frame 29:  Volume 924.0 A^3  Surf. A. 942.0 A^2
+	Frame 31:  Volume 1185.0 A^3  Surf. A. 833.0 A^2
+	Frame 33:  Volume 1192.0 A^3  Surf. A. 742.0 A^2
+	Frame 35:  Volume 755.0 A^3  Surf. A. 586.0 A^2
+	Frame 37:  Volume 1260.0 A^3  Surf. A. 876.0 A^2
+	Frame 39:  Volume 1390.0 A^3  Surf. A. 840.0 A^2
+	Frame 41:  Volume 1566.0 A^3  Surf. A. 764.0 A^2
+	Frame 43:  Volume 931.0 A^3  Surf. A. 831.0 A^2
+	Frame 45:  Volume 968.0 A^3  Surf. A. 942.0 A^2
+	Frame 47:  Volume 687.0 A^3  Surf. A. 568.0 A^2
+	Frame 49:  Volume 966.0 A^3  Surf. A. 867.0 A^2
+	Frame 51:  Volume 895.0 A^3  Surf. A. 912.0 A^2
+	Frame 53:  Volume 615.0 A^3  Surf. A. 565.0 A^2
+	Frame 55:  Volume 1049.0 A^3  Surf. A. 677.0 A^2
+	Frame 57:  Volume 1054.0 A^3  Surf. A. 735.0 A^2
+	Frame 59:  Volume 928.0 A^3  Surf. A. 1072.0 A^2
+	Frame 61:  Volume 1582.0 A^3  Surf. A. 883.0 A^2
+	Frame 63:  Volume 1586.0 A^3  Surf. A. 754.0 A^2
+	Frame 65:  Volume 998.0 A^3  Surf. A. 617.0 A^2
+	Frame 67:  Volume 1163.0 A^3  Surf. A. 681.0 A^2
+	Frame 69:  Volume 1188.0 A^3  Surf. A. 774.0 A^2
+	Frame 71:  Volume 1217.0 A^3  Surf. A. 720.0 A^2
+	Frame 73:  Volume 1233.0 A^3  Surf. A. 740.0 A^2
+	Frame 75:  Volume 1056.0 A^3  Surf. A. 954.0 A^2
+	Frame 77:  Volume 1263.0 A^3  Surf. A. 778.0 A^2
+	Frame 79:  Volume 973.0 A^3  Surf. A. 686.0 A^2
+	Frame 81:  Volume 1121.0 A^3  Surf. A. 755.0 A^2
+	Frame 83:  Volume 1242.0 A^3  Surf. A. 728.0 A^2
+	Frame 85:  Volume 1206.0 A^3  Surf. A. 756.0 A^2
+	Frame 87:  Volume 1006.0 A^3  Surf. A. 975.0 A^2
+	Frame 89:  Volume 1476.0 A^3  Surf. A. 675.0 A^2
+	Frame 91:  Volume 1237.0 A^3  Surf. A. 1210.0 A^2
+	Frame 93:  Volume 1230.0 A^3  Surf. A. 771.0 A^2
+	Frame 95:  Volume 1193.0 A^3  Surf. A. 812.0 A^2
+	Frame 97:  Volume 1031.0 A^3  Surf. A. 699.0 A^2
+	Frame 99:  Volume 1352.0 A^3  Surf. A. 734.0 A^2
+	Frame 101:  Volume 1042.0 A^3  Surf. A. 755.0 A^2
+	Frame 103:  Volume 850.0 A^3  Surf. A. 728.0 A^2
+	Frame 105:  Volume 1288.0 A^3  Surf. A. 739.0 A^2
+	Frame 107:  Volume 855.0 A^3  Surf. A. 684.0 A^2
+	Frame 109:  Volume 1393.0 A^3  Surf. A. 1208.0 A^2
+	Frame 111:  Volume 1433.0 A^3  Surf. A. 1228.0 A^2
+	Frame 113:  Volume 1059.0 A^3  Surf. A. 838.0 A^2
+	Frame 115:  Volume 1108.0 A^3  Surf. A. 742.0 A^2
+	Frame 117:  Volume 645.0 A^3  Surf. A. 514.0 A^2
+	Frame 119:  Volume 1298.0 A^3  Surf. A. 1166.0 A^2
+	Frame 121:  Volume 1297.0 A^3  Surf. A. 1147.0 A^2
+	Frame 123:  Volume 1066.0 A^3  Surf. A. 976.0 A^2
+	Frame 125:  Volume 1081.0 A^3  Surf. A. 1034.0 A^2
+	Frame 129:  Volume 1117.0 A^3  Surf. A. 759.0 A^2
+	Frame 127:  Volume 1560.0 A^3  Surf. A. 912.0 A^2
+	Frame 133:  Volume 1540.0 A^3  Surf. A. 805.0 A^2
+	Frame 131:  Volume 1573.0 A^3  Surf. A. 947.0 A^2
+	Frame 137:  Volume 1181.0 A^3  Surf. A. 1016.0 A^2
+	Frame 135:  Volume 1419.0 A^3  Surf. A. 1009.0 A^2
+	Frame 141:  Volume 737.0 A^3  Surf. A. 769.0 A^2
+	Frame 139:  Volume 1043.0 A^3  Surf. A. 814.0 A^2
+	Frame 145:  Volume 1262.0 A^3  Surf. A. 867.0 A^2
+	Frame 143:  Volume 1495.0 A^3  Surf. A. 844.0 A^2
+	Frame 149:  Volume 1169.0 A^3  Surf. A. 767.0 A^2
+	Frame 147:  Volume 1223.0 A^3  Surf. A. 680.0 A^2
+	Frame 151:  Volume 806.0 A^3  Surf. A. 824.0 A^2
+	Frame 153:  Volume 1453.0 A^3  Surf. A. 898.0 A^2
+	Frame 155:  Volume 883.0 A^3  Surf. A. 684.0 A^2
+	Frame 157:  Volume 1551.0 A^3  Surf. A. 916.0 A^2
+	Frame 159:  Volume 1001.0 A^3  Surf. A. 895.0 A^2
+	Frame 161:  Volume 1078.0 A^3  Surf. A. 900.0 A^2
+	Frame 163:  Volume 947.0 A^3  Surf. A. 796.0 A^2
+	Frame 165:  Volume 564.0 A^3  Surf. A. 518.0 A^2
+	Frame 169:  Volume 441.0 A^3  Surf. A. 507.0 A^2
+	Frame 167:  Volume 921.0 A^3  Surf. A. 926.0 A^2
+	Frame 173:  Volume 1083.0 A^3  Surf. A. 1101.0 A^2
+	Frame 171:  Volume 1544.0 A^3  Surf. A. 1014.0 A^2
+	Frame 175:  Volume 1273.0 A^3  Surf. A. 864.0 A^2
+
+FRAME        | VOLUME (A^3) | SURF. A. (A^2)
+-------------+--------------+----------------
+1            |   1100.0     |   759.0
+2            |   1189.0     |   799.0
+3            |   922.0      |   924.0
+4            |   1588.0     |   1042.0
+5            |   1439.0     |   1077.0
+6            |   1536.0     |   976.0
+7            |   1223.0     |   816.0
+8            |   1129.0     |   1033.0
+9            |   1197.0     |   730.0
+10           |   1021.0     |   724.0
+11           |   1026.0     |   681.0
+12           |   1133.0     |   701.0
+13           |   1072.0     |   718.0
+14           |   1404.0     |   875.0
+15           |   1086.0     |   716.0
+16           |   1352.0     |   737.0
+17           |   1169.0     |   686.0
+18           |   1069.0     |   784.0
+19           |   1097.0     |   690.0
+20           |   1145.0     |   856.0
+21           |   861.0      |   696.0
+22           |   1128.0     |   762.0
+23           |   1362.0     |   1027.0
+24           |   1024.0     |   766.0
+25           |   601.0      |   609.0
+26           |   571.0      |   541.0
+27           |   980.0      |   983.0
+28           |   1190.0     |   1011.0
+29           |   924.0      |   942.0
+30           |   593.0      |   495.0
+31           |   1185.0     |   833.0
+32           |   1003.0     |   976.0
+33           |   1192.0     |   742.0
+34           |   1120.0     |   1182.0
+35           |   755.0      |   586.0
+36           |   1193.0     |   1032.0
+37           |   1260.0     |   876.0
+38           |   1420.0     |   762.0
+39           |   1390.0     |   840.0
+40           |   1463.0     |   765.0
+41           |   1566.0     |   764.0
+42           |   1483.0     |   803.0
+43           |   931.0      |   831.0
+44           |   857.0      |   711.0
+45           |   968.0      |   942.0
+46           |   670.0      |   559.0
+47           |   687.0      |   568.0
+48           |   1307.0     |   1026.0
+49           |   966.0      |   867.0
+50           |   1043.0     |   940.0
+51           |   895.0      |   912.0
+52           |   846.0      |   768.0
+53           |   615.0      |   565.0
+54           |   581.0      |   580.0
+55           |   1049.0     |   677.0
+56           |   1050.0     |   699.0
+57           |   1054.0     |   735.0
+58           |   1085.0     |   755.0
+59           |   928.0      |   1072.0
+60           |   884.0      |   586.0
+61           |   1582.0     |   883.0
+62           |   1554.0     |   799.0
+63           |   1586.0     |   754.0
+64           |   1052.0     |   663.0
+65           |   998.0      |   617.0
+66           |   1043.0     |   711.0
+67           |   1163.0     |   681.0
+68           |   1249.0     |   717.0
+69           |   1188.0     |   774.0
+70           |   1060.0     |   707.0
+71           |   1217.0     |   720.0
+72           |   1061.0     |   762.0
+73           |   1233.0     |   740.0
+74           |   637.0      |   565.0
+75           |   1056.0     |   954.0
+76           |   1206.0     |   699.0
+77           |   1263.0     |   778.0
+78           |   1285.0     |   722.0
+79           |   973.0      |   686.0
+80           |   1108.0     |   761.0
+81           |   1121.0     |   755.0
+82           |   1091.0     |   698.0
+83           |   1242.0     |   728.0
+84           |   1239.0     |   726.0
+85           |   1206.0     |   756.0
+86           |   1161.0     |   767.0
+87           |   1006.0     |   975.0
+88           |   1096.0     |   987.0
+89           |   1476.0     |   675.0
+90           |   1565.0     |   744.0
+91           |   1237.0     |   1210.0
+92           |   1304.0     |   785.0
+93           |   1230.0     |   771.0
+94           |   1265.0     |   780.0
+95           |   1193.0     |   812.0
+96           |   954.0      |   685.0
+97           |   1031.0     |   699.0
+98           |   1045.0     |   687.0
+99           |   1352.0     |   734.0
+100          |   1109.0     |   745.0
+101          |   1042.0     |   755.0
+102          |   1548.0     |   985.0
+103          |   850.0      |   728.0
+104          |   534.0      |   532.0
+105          |   1288.0     |   739.0
+106          |   916.0      |   717.0
+107          |   855.0      |   684.0
+108          |   921.0      |   690.0
+109          |   1393.0     |   1208.0
+110          |   1289.0     |   1242.0
+111          |   1433.0     |   1228.0
+112          |   1372.0     |   1243.0
+113          |   1059.0     |   838.0
+114          |   888.0      |   734.0
+115          |   1108.0     |   742.0
+116          |   1316.0     |   989.0
+117          |   645.0      |   514.0
+118          |   1059.0     |   887.0
+119          |   1298.0     |   1166.0
+120          |   1292.0     |   1162.0
+121          |   1297.0     |   1147.0
+122          |   1016.0     |   892.0
+123          |   1066.0     |   976.0
+124          |   1030.0     |   966.0
+125          |   1081.0     |   1034.0
+126          |   583.0      |   555.0
+127          |   1560.0     |   912.0
+128          |   1272.0     |   752.0
+129          |   1117.0     |   759.0
+130          |   1183.0     |   735.0
+131          |   1573.0     |   947.0
+132          |   1337.0     |   884.0
+133          |   1540.0     |   805.0
+134          |   856.0      |   664.0
+135          |   1419.0     |   1009.0
+136          |   1345.0     |   787.0
+137          |   1181.0     |   1016.0
+138          |   1404.0     |   738.0
+139          |   1043.0     |   814.0
+140          |   1361.0     |   718.0
+141          |   737.0      |   769.0
+142          |   1364.0     |   1076.0
+143          |   1495.0     |   844.0
+144          |   1498.0     |   801.0
+145          |   1262.0     |   867.0
+146          |   881.0      |   663.0
+147          |   1223.0     |   680.0
+148          |   1076.0     |   962.0
+149          |   1169.0     |   767.0
+150          |   585.0      |   551.0
+151          |   806.0      |   824.0
+152          |   1204.0     |   1112.0
+153          |   1453.0     |   898.0
+154          |   1014.0     |   675.0
+155          |   883.0      |   684.0
+156          |   838.0      |   706.0
+157          |   1551.0     |   916.0
+158          |   744.0      |   618.0
+159          |   1001.0     |   895.0
+160          |   1089.0     |   904.0
+161          |   1078.0     |   900.0
+162          |   1278.0     |   1229.0
+163          |   947.0      |   796.0
+164          |   960.0      |   770.0
+165          |   564.0      |   518.0
+166          |   961.0      |   909.0
+167          |   921.0      |   926.0
+168          |   566.0      |   549.0
+169          |   441.0      |   507.0
+170          |   1260.0     |   1012.0
+171          |   1544.0     |   1014.0
+172          |   1220.0     |   740.0
+173          |   1083.0     |   1101.0
+174          |   809.0      |   656.0
+175          |   1273.0     |   864.0
+
+Execution time = 10679.513937 sec
+
