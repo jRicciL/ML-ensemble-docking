@@ -1,7 +1,7 @@
 library(ggplot2)
 library(tidyverse)
 
-plot_cMDS <- function(df) {
+plot_cMDS <- function(df, top_ = 8) {
     
     #' A simple function to project a cMSD plot (scatter plot) 
     #' highlighting the top 16 RFE conformations
@@ -12,7 +12,6 @@ plot_cMDS <- function(df) {
     #' @Retuns
     #'      A ggplot2 scatter plot
     
-    top_16 <- 16
     p = ggplot() +
     geom_hline(yintercept = 0, 
                linetype = "dashed", 
@@ -30,7 +29,7 @@ plot_cMDS <- function(df) {
                    colour ='#61B0B3', fill='#87DADE', 
                    alpha  = 0.6)) + 
     (df %>% 
-     filter(rfe_ranking <= top_16) %>%
+     filter(rfe_ranking <= top_) %>%
      geom_point(mapping = aes(
                               x = x, 
                               y = y,
@@ -45,20 +44,20 @@ plot_cMDS <- function(df) {
           panel.border = element_rect(colour = "black", fill = NA, size = 0.8),
           panel.background = element_rect(fill = "white",
                                 colour = "white",
-                                size = 1, linetype = "solid"),
-          axis.title.y = element_text(size=13),
-          axis.text.y  = element_text(size=11, angle=0),
+                                size = 1.2, linetype = "solid"),
+          axis.title.y = element_text(size=15),
+          axis.text.y  = element_text(size=13, angle=0),
           panel.grid.major.y = element_line(size = 0.2, 
                                             linetype = 'solid', colour = "grey"), 
           panel.grid.minor.y = element_line(size = 0.2, 
                                             linetype = 'solid', colour = "lightgrey"),
-          axis.title.x = element_text(size=13),
-          axis.text.x  = element_text(size=11, angle=0),
+          axis.title.x = element_text(size=15),
+          axis.text.x  = element_text(size=13, angle=0),
           panel.grid.major.x = element_line(size = 0.2, 
                                             linetype = 'solid', colour = "grey"), 
           panel.grid.minor.x = element_line(size = 0.2, 
                                             linetype = 'solid', colour = "lightgrey"),
-          plot.title = element_text(hjust = 0.5, size=11)
+          plot.title = element_text(hjust = 0.5, size=15)
              ) + 
              scale_radius() +
              labs(x = 'First dimension', 
