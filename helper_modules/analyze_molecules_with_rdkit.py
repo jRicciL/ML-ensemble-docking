@@ -36,9 +36,13 @@ def load_molecules_from_dir(list_of_sdf_files: List) -> Dict:
         # Try to load the molecule with sanitize = True
         mol_rd = Chem.SDMolSupplier(sdf_file, sanitize = True)[0]
         if mol_rd is None:
-            mol_rd = Chem.SDMolSupplier(sdf_file, sanitize = False)[0]
-            mol_rd.UpdatePropertyCache(strict = False)
-            sanitized = False
+        	try:
+	            mol_rd = Chem.SDMolSupplier(sdf_file, sanitize = False)[0]
+	            mol_rd.UpdatePropertyCache(strict = False)
+	            sanitized = False
+	        except AttributeError:
+	        	print(f'Error with', mol_name)
+	        	mol_rd, sanitized = None, None
         mols_dict[mol_name] = [mol_rd, sanitized]
     return mols_dict
 
@@ -87,11 +91,17 @@ def load_cocrys_molecules_from_dir(list_sdf_files: List) -> pd.DataFrame:
             ligs_validation_dic[pdb_id] = 'v2'
             # FINAL TRY: Molecule is read from '_from_mol2.sdf' without sanitize it
             if mols_dict[pdb_id] is None:
-                mol_rd = Chem.SDMolSupplier(file, sanitize = False)[0]
-                # Force strict to flase to let use some descriptors without sanitization
-                mol_rd.UpdatePropertyCache(strict = False)
-                mols_dict[pdb_id] = mol_rd
-                ligs_validation_dic[pdb_id] = 'v3'
+                try:
+                    mol_rd = Chem.SDMolSupplier(file, sanitize = False)[0]
+                    # Force strict to false to let use some descriptors without sanitization
+                    mol_rd.UpdatePropertyCache(strict = False)
+                    mols_dict[pdb_id] = mol_rd
+                    ligs_validation_dic[pdb_id] = 'v3'
+                except AttributeError:
+                    print(f'Error with', pdb_id)
+                    mol_rd, sanitized = None, None
+                    mols_dict[pdb_id] = mol_rd
+                    ligs_validation_dic[pdb_id] = 'error'
     # Create the final dataframe
     df = pd.DataFrame.from_dict(pdbId_lig_dic, orient='index', columns=["Lig"])
     df["mol_rdk"] = mols_dict.values()
