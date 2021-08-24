@@ -68,22 +68,61 @@ plot_swarm_box <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE,
       scale_fill_manual(values=cbbPalette)
 }
 
-plot_violin <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_label='AUC-ROC', scale='area',
-                           y_min=0.4, y_max=1, dot_size=8, bin_width=0.001, base_h_line=0.5,
-                           violin_width=1.1) {
+
+add_ref_values <- function(text, 
+                           value, 
+                           color='#888888', 
+                           y_add=0.02, 
+                           x=0.5, 
+                           size=2.3) {
+    list(
+        geom_hline(yintercept= value, linetype="dashed", color=color, size=0.3),
+        annotate('text', x=x, y= value + y_add, label=text, color=color,  size=size, hjust=0)
+    )
+}
+
+
+plot_violin <- function(df, 
+                        cbbPalette = cbbPalette, 
+                        decreasing_order = TRUE, 
+                        y_label='AUC-ROC', 
+                        scale='width', 
+                        trim = TRUE,
+                        y_min=0.4, 
+                        y_max=1, 
+                        dot_size=4, 
+                        bin_width=0.001, 
+                        base_h_line=0.5,
+                        violin_width=0.9, 
+                        names_order = NULL,
+                        scp_values_R = NULL) {
     
-    names_order <- names(sort(apply(df, 2, FUN=median), decreasing = decreasing_order))
+    if (is.null(names_order)){
+        names_order <- names(sort(apply(df, 2, FUN=median), 
+                                  decreasing = decreasing_order))
+    }
+    
+    if (!is.null(scp_values_R)){
+       scp_values_R = unlist(scp_values_R)
+       mean_scp = scp_values_R[1]
+       std_scp = scp_values_R[2]
+       max_scp = scp_values_R[3]
+    }
+
     df <- df[, names_order]
     
     df_melted <- df %>%
         mutate(rep = factor(1:nrow(.))) %>%
-        pivot_longer(cols=c(everything(), -rep), names_to='method', values_to='score')
+        pivot_longer(cols=c(everything(), -rep), 
+                     names_to='method', 
+                     values_to='score')
     
-    df_melted$method <- factor(df_melted$method, levels = names_order)
-   
+    df_melted$method <- factor(df_melted$method, 
+                               levels = names_order)
 
-    sumld<- ddply(df_melted, ~method, summarise, 
-                  mean = mean(score), 
+    sumld<- ddply(df_melted, ~method, 
+                  summarise, 
+                  mean   = mean(score), 
                   median = median(score), 
                   lower = lb(score), 
                   upper = ub(score))
@@ -92,12 +131,30 @@ plot_violin <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_
            mapping = aes(x = method, 
                          y = score, 
                          fill = method)) + 
-      geom_hline(yintercept= base_h_line, linetype="dotted", color="#444444", lwd=0.8) +
-      geom_violin(width=violin_width, lwd=0.3, color='black', alpha=0.6, trim=TRUE, scale=scale) +
-      geom_boxplot(aes(outlier.color=method), notch=TRUE, width=0.3, lwd=0.2, color='black',
-                  outlier.size=0.5, outier.shape=21) +
-      # theme(text=element_text(family="Trebuchet MS")) + 
-      stat_summary(fun.data = mean_sdl, 
+     
+     # Plot the ribbon showing the standard deviation
+     # of the SCP
+    {if (!is.null(scp_values_R)){
+        geom_rect(
+        aes(xmax = Inf,
+            xmin = -Inf,
+            ymax = mean_scp + std_scp, 
+            ymin = mean_scp - std_scp),
+            fill = '#eeeeee', alpha = 0.1)
+    }} +
+    # Plot the Random reference line
+     geom_hline(yintercept = base_h_line, 
+                 linetype = "dotted", 
+                 color = "#444444", lwd = 0.8) +
+     # Plot the violinboxplot
+     geom_violin(width = violin_width, lwd=0.3, 
+                  color='black', alpha=0.6, 
+                  trim=trim, scale=scale) +
+     geom_boxplot(aes(outlier.color=method), 
+                   notch=TRUE, width=0.3, 
+                   lwd=0.2, color='black',
+                   outlier.size=0.5, outier.shape=21) +
+     stat_summary(fun.data = mean_sdl, 
                    fun.args = list(mult = 1), 
                    geom = "pointrange", 
                    position = position_nudge(0.5)) +
@@ -107,6 +164,14 @@ plot_violin <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_
                     size = 0.6, stroke=0.5) +
       geom_point(data = sumld, aes(x = method, y = median), colour='white',
                     size = 0.6, stroke=0.1) +
+     # Plot the lines showing the mean and maximum value
+     # of the SCP
+      {if (!is.null(scp_values_R)){
+        list(add_ref_values('avg SCP', mean_scp, 
+               color='#297177', size=2.4, y_add=0.02), 
+             add_ref_values('max SCP', max_scp, 
+               color='#E1492B', size=2.4, y_add=0.02))
+      }} +
         theme(legend.position = "none", panel.border = element_rect(colour = "black", fill=NA, size=0.6),
               panel.background = element_rect(fill = "white",
                                     colour = "white",
@@ -120,18 +185,8 @@ plot_violin <- function(df, cbbPalette = cbbPalette, decreasing_order = TRUE, y_
           labs(x = "Methods (ML/CS)", 
                y = y_label) +
       scale_y_continuous(breaks = seq(y_min, y_max, 0.1), limits = c(y_min, y_max)) + 
-      # scale_x_discrete(guide = guide_axis(n.dodge = 2)) + 
-    #   scale_fill_brewer(palette = "") +
       scale_fill_manual(values=cbbPalette)
 }
-
-
-add_ref_values <- function(text, value, color='#888888', y_add=0.02, x=0.5, size=2.3) {
-        list(
-            geom_hline(yintercept= value, linetype="dashed", color=color, size=0.3),
-            annotate('text', x=x, y= value + y_add, label=text, color=color,  size=size, hjust=0)
-        )
-    }
 
 
 plot_lines <- function(df, cbbPalette=cbbPalette, y_label='AUC-ROC', y_min=0.4, y_max=1, switch_x=TRUE, 
@@ -173,7 +228,7 @@ plot_lines <- function(df, cbbPalette=cbbPalette, y_label='AUC-ROC', y_min=0.4, 
              ) + 
         labs(x = x_label, y = y_label) +
         {if(include_color_scale) 
-        scale_color_manual(values=rev(cbbPalette), name='selection')} +
-        {if(include_color_scale) 
-        scale_fill_manual(values=rev(cbbPalette), name='selection')}
+        scale_fill_manual(values=cbbPalette, name = 'selection')} +
+    {if(include_color_scale) 
+        scale_color_manual(values=cbbPalette, name = 'selection')}
     }
