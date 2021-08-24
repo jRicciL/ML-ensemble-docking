@@ -7,8 +7,6 @@ library(ez)
 library(xtable)
 
 # REPEAT THIS ANALYSIS PER METRIC AND PER PROTEIN
-# MEtrics: roc_auc and nef_12_Ra
-# Proteins: cv30x4_cdk2.csv and cv30x4_fxa.csv
 
 do_RM_ANOVA <- function(csv_file, metric_colname='roc_auc') {
   df = read.csv(csv_file, header = TRUE)
