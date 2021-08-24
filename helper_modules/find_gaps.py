@@ -1,5 +1,6 @@
 import re
 from prody import parsePDB
+from Bio import pairwise2, SeqIO
 from typing import Tuple
 
 def get_gaps_and_coverage(pdb_file: str, 
@@ -11,12 +12,12 @@ def get_gaps_and_coverage(pdb_file: str,
     '''
     structure = parsePDB(pdb_file).getHierView()[chain]
     seq_query = structure.getSequence()
-    alignment = pairwise2.align.globalxs(seq_query, seq_TOTAL, 
+    alignment = pairwise2.align.globalxs(seq_query, full_sequence, 
                                             -10, -1, gap_char='-',
                                         one_alignment_only = True)[0]
     seq_alg = alignment[0]
 
-    coverage = len(seq_query) / len(seq_TOTAL) *100
+    coverage = len(seq_query) / len(full_sequence) *100
     gaps = find_gaps(alignment[0])
     num_gaps = gaps["num_gaps"]
     gap_lengths = gaps["gap_lengths"]
@@ -57,3 +58,6 @@ def is_a_gap(x, seq_intervals):
     for i in x: 
             for j in range(i[0], i[1] + 1 ): gap_res.append(j)
     return set(gap_res).isdisjoint(seq_intervals)
+
+
+
