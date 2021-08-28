@@ -25,3 +25,4 @@
 **/res_*.dx
 **/old_*.ipynb
 **/TEST_*.ipynb
+.Rhistory
