@@ -1,8 +1,8 @@
 # CDK2 jupyter notebooks
 
-**Directory structure:**
+## **Directory structure:**
 
-1. **`1_Download_and_prepare_protein_ensembles`:**
+### 1. **`Download_and_prepare_protein_ensembles`:**
 
 - Download, model and prepare crystallographic protein structures from the Protein Data Bank.
 
@@ -17,7 +17,7 @@
 
 
 
-1. **`2_Molecular_libraries`:**
+### 2. **`Molecular_libraries`:**
 
 - Download and prepare the molecular libraries.
     
