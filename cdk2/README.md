@@ -7,7 +7,7 @@
 - Download, model and prepare <mark style='background-color: #FFF2CD'>crystallographic protein</mark> structures from the Protein Data Bank.
 
     
-| # | Info | Notebook  | View |
+| # | Description | Notebook  | View |
 | - |- | - | ---- |
 | 1 | Download `PDB` structures | 📙 [`1_Download_crystal_structures_from_PDB.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/1_Download_and_prepare_protein_ensembles/1_Download_crystal_structures_from_PDB.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/1_Download_and_prepare_protein_ensembles/1_Download_crystal_structures_from_PDB.ipynb) |
 | 2 | Get `PDB` metadata | 📙 [`2_Get_PDB_structures_metadata.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/1_Download_and_prepare_protein_ensembles/2_Get_PDB_structures_metadata.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/1_Download_and_prepare_protein_ensembles/2_Get_PDB_structures_metadata.ipynb) |
@@ -21,7 +21,7 @@
 
 - Download and prepare the <mark style='background-color: #FFF2CD'>molecular libraries</mark>.
     
-| # | Info | Notebook  | View |
+| # | Description | Notebook  | View |
 | - |- | - | ---- |
 | 1 | Download molecular libraries |📙 [`1_Get_Molecular_libraries.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/2_Molecular_libraries/1_Get_Molecular_libraries.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/2_Molecular_libraries/1_Get_Molecular_libraries.ipynb) |
 | 2 | Load molecules with `rdkit` |📙 [`2_Loading_molecules_from_db_with_rdkit.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/2_Molecular_libraries/2_Loading_molecules_from_db_with_rdkit.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/2_Molecular_libraries/2_Loading_molecules_from_db_with_rdkit.ipynb) |
@@ -32,7 +32,7 @@
 
 - Prepare and analyze protein conformational ensembles.
     
-| # | Info | Notebook  | View |
+| # | Description | Notebook  | View |
 | - |- | - | ---- |
 | 1 | Analize protein ensembles | 📙 [`1_Structural_analysis_of_Protein_Ensembles.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/3_Protein_Ensembles_Analysis/1_Structural_analysis_of_Protein_Ensembles.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/3_Protein_Ensembles_Analysis/1_Structural_analysis_of_Protein_Ensembles.ipynb) |
 
@@ -40,7 +40,7 @@
 
 - Analyze ensemble docking results.
     
-| # | Info | Notebook  | View |
+| # | Description | Notebook  | View |
 | - |- | - | ---- |
 | 1 | `SMINA/Vinardo` docking params. | 📙 [`1_Docking_Parameters_used.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/4_Ensemble_docking_results/1_Docking_Parameters_used.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/4_Ensemble_docking_results/1_Docking_Parameters_used.ipynb) |
 | 2 | Load Enseble Docking resutls | 📙 [`2_Ensemble_Docking_Results.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/4_Ensemble_docking_results/2_Ensemble_Docking_Results.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/4_Ensemble_docking_results/2_Ensemble_Docking_Results.ipynb) |
@@ -50,7 +50,7 @@
 
 - Apply and compare `Consensus strategies` and `Machine learning` classifiers through 30 repetitions of 4-fold cross-validation ($30 \times 4 cv$), conformational selection strategies, and `Recursive Feature Elimination`.
     
-| # | Info | Notebook  | View |
+| # | Description | Notebook  | View |
 | - |- | - | ---- |
 | 1 | Hyperparameter tuning | 📙 [`1_Hyperparameter_tuning_stage.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/5_Machine_Learning/1_Hyperparameter_tuning_stage.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/5_Machine_Learning/1_Hyperparameter_tuning_stage.ipynb) |
 | 2a | __*30x4cv*__: All confs., tuned Hyprms. | 📙 [`2_30x4CV_analysis.ipynb`](https://github.com/jRicciL/ML-ensemble-docking/tree/main/cdk2/5_Machine_Learning/2_30x4CV_analysis.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/jRicciL/ML-ensemble-docking/blob/main/cdk2/5_Machine_Learning/2_30x4CV_analysis.ipynb) |
