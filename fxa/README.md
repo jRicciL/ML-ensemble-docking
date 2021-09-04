@@ -4,7 +4,7 @@
 
 ### 1. **`Download_and_prepare_protein_ensembles`:**
 
-- Download, model and prepare <mark style='background-color: #FFF2CD'>crystallographic protein</mark> structures from the Protein Data Bank.
+- Download, model, and prepare <mark style='background-color: #FFF2CD'>crystallographic protein</mark> structures from the Protein Data Bank.
 
     
 | # | Description | Notebook  | View |
