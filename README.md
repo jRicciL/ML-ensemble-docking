@@ -1,5 +1,6 @@
 # Improving Structure-Based Virtual Screening with Ensemble Docking and Machine Learning
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FjRicciL%2FML-ensemble-docking&count_bg=%2357C0C0&title_bg=%23555555&icon=jupyter.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
 ## 🗂 About this repository
 
