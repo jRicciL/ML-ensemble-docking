@@ -4,7 +4,7 @@
 
 ## 🗂 About this repository
 
-### 📙 **This repository includes:**
+### 📙 **Content:**
 
 - **Jupyter notebooks**, to follow the study's workflow,  
   required to reproduce the **results** and **figures** of the study. 
@@ -13,8 +13,8 @@
 
 ### **📂 Protein directories:**
 
-We evaluated **target-specific ML models** for structure-based virtual screening.  
-The following proteins were considered as case studies:
+We evaluated **target-specific ML models** for *structure-based virtual screening*.  
+The following **four proteins** were considered as case studies:
 
 | # | Protein name | Directory  | UniProtKB  |
 | - |- | - | ---- |
@@ -37,17 +37,17 @@ Each **protein** directory (`cdk2`, `fxa`, `egfr`, `hsp90`) has the following st
     
 ### Requirements:
 #### 🐍 `Python`: Conda environment and required python libraries
-- Install conda or miniconda.
+- Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) or [miniconda](https://docs.conda.io/en/latest/miniconda.html).
 - Create a conda environment from the `conda_environment.yml` file.  
 ```shell
 conda env create -f conda_environment.yml
 ```
 
-- The above will install all the python libraries used during this study.
+- The above will install all the python libraries used during our study.
 
 #### 🔵 `R`: Libraries used
-- Some analysis and plots were performed using `R` (version 4.0.3)
-- The `R` libraries used here are listed at the top at the top of each `R` script inside the `R_scripts` directory.
+- Some of the analysis and plots were performed using `R` (version 4.0.3)
+- The `R` libraries used here are listed at the top of each `R` script inside the `R_scripts` directory.
 
 
 ## 👥 Authors 
