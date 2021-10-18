@@ -2,7 +2,18 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FjRicciL%2FML-ensemble-docking&count_bg=%2357C0C0&title_bg=%23555555&icon=jupyter.svg&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
-## 🗂 About this repository
+### Main publication
+Ricci-Lopez, J., Aguila, S. A., Gilson, M. K. & Brizuela, C. A. *Improving Structure-Based Virtual Screening with Ensemble Docking and Machine Learning.* **J. Chem. Inf. Model.** acs.jcim.1c00511 (2021) [doi:10.1021/ACS.JCIM.1C00511](https://pubs.acs.org/doi/10.1021/acs.jcim.1c00511#.YW2QCUhELBp.linkedin).
+
+### Abstract
+
+<details>
+  <summary><b>Click to toggle abstract</b></summary>
+One of the main challenges of structure-based virtual screening (SBVS) is the incorporation of the receptor’s flexibility, as its explicit representation in every docking run implies a high computational cost. Therefore, a common alternative to include the receptor’s flexibility is the approach known as ensemble docking. Ensemble docking consists of using a set of receptor conformations and performing the docking assays over each of them. However, there is still no agreement on how to combine the ensemble docking results to obtain the final ligand ranking. A common choice is to use consensus strategies to aggregate the ensemble docking scores, but these strategies exhibit slight improvement regarding the single-structure approach. Here, we claim that using machine learning (ML) methodologies over the ensemble docking results could improve the predictive power of SBVS. To test this hypothesis, four proteins were selected as study cases: CDK2, FXa, EGFR, and HSP90. Protein conformational ensembles were built from crystallographic structures, whereas the evaluated compound library comprised up to three benchmarking data sets (DUD, DEKOIS 2.0, and CSAR-2012) and cocrystallized molecules. Ensemble docking results were processed through 30 repetitions of 4-fold cross-validation to train and validate two ML classifiers: logistic regression and gradient boosting trees. Our results indicate that the ML classifiers significantly outperform traditional consensus strategies and even the best performance case achieved with single-structure docking. We provide statistical evidence that supports the effectiveness of ML to improve the ensemble docking performance.
+</details>
+
+
+# 🗂 About this repository
 
 ### 📙 **Content:**
 
