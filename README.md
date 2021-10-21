@@ -18,9 +18,9 @@ One of the main challenges of structure-based virtual screening (SBVS) is the in
 
 ### 📙 **Content:**
 
-- **Jupyter notebooks**, to follow the study's workflow,  
-  required to reproduce the **results** and **figures** of the study. 
-- **Helper Python and R scripts**.
+- **Jupyter notebooks** with the study's workflow.
+  They are required to reproduce the **results** and **figures** of the study. 
+- **Python and R scripts** containing helper functions.
 - **Main datasets and complementary files**. 
 
 ### **📂 Protein directories:**
