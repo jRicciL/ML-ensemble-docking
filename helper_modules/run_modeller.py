@@ -6,59 +6,100 @@ from modeller import *
 from modeller.automodel import *
 from helper_modules.find_gaps import *
 from glob import glob
+from typing import List
+import numpy as np
 
 
-def run_modeller(pdb_file: str, 
-                 seq_prot: str, 
-                 output_dir: str = './', 
+def missing_elements_from_resnums(resnums: List[int], 
+                                  max_pos: int) -> List[int]:
+    start, end = resnums[0], max(resnums[-1], max_pos)
+    missed_elements = sorted(
+        set(range(start, end + 1)).difference(resnums))
+    return missed_elements
+
+def missing_elements_from_aa_sequence(seq: str):
+    missed_elements = [i for i, c 
+                        in enumerate(seq, 1) if c == '-' ]
+    return missed_elements
+
+def run_modeller(pdb_file: str,
+                 target_sequence: str, 
+                 output_dir: str = './',
                  keep_original_resnum: bool = True,
                  num_res_window: int = 2, 
-                 force_modeling: bool = False,
+                 overwrite: bool = True,
                  max_var_iterations: int = 500, 
                  repeat_optimization: int = 2,
                  chid: str = 'A',
-                 verbose: bool = True
+                 verbose: bool = True,
+                 start_position = None,
+                 end_position = None
                 ) -> None:
     '''
     Given a pdb structure with missing regions and the full protein sequence, 
     this function models missing loops inside the structure using Modeller
     '''
     
-    file_name = pdb_file.split('/')[-1].split('.')[0]
-    output_file_name = output_dir + file_name + '_mod.pdb'
+    base_name = pdb_file.split('/')[-1].split('.')[0]
+    output_model_file = f'{output_dir}/{base_name}_mod.pdb'
 
     # Skip modelling if the model file already exists
-    if not force_modeling:
-        if os.path.isfile(output_file_name):
-            return print("Model already exists:", file_name)
-    #
+    if not overwrite:
+        if os.path.isfile(output_model_file):
+            return print("Model already exists:", base_name)
     try:
         # Read the pdb file, omit non standard residues and residues with negative numbering
         stc_prot = parsePDB(pdb_file)
-        print(stc_prot.getResnames())
+        if not start_position is None and not end_position is None:
+            try:
+                stc_prot = stc_prot.select(
+               f'resnum {start_position} to {end_position}').toAtomGroup()
+            except:
+                None
         stc_prot = stc_prot.select('not nonstdaa and resid > 0') 
-        print(pdb_file)
         # Get the sequence of the given structure
         seq_cry = stc_prot.select('ca').getSequence()
-        print(seq_cry)
     except FileNotFoundError as e:
-        print(e, "Error at opening:", file_name)
+        print(e, "Error at opening:", base_name)
         return
     
     # Asks if the sequences have the same length
-    same_seq = len(seq_cry) == len(seq_prot) and seq_cry == seq_prot
+    # assert (len(seq_cry) == len(target_sequence))
+    # assert (seq_cry == target_sequence)
     
     # Force the structure chain to be name as `A`
     stc_prot.setChids("A")
     
-    crys_file_name = pdb_file
-    model_file_name = file_name + '_mod'
+    crys_base_name = pdb_file
+    model_base_name = base_name + '.modeller'
 
     # Performs the sequence alignment
-    alignment = pairwise2.align.globalms(seq_cry, seq_prot,  3, -1, -10, -.1, gap_char='-')[0]
+    # pairwise returns multiple possible alingments with similar scores
+    alignments = pairwise2.align.globalms(
+        sequenceA = seq_cry, 
+        sequenceB = target_sequence,  
+        match    = 3, 
+        mismatch = -1, 
+        open     = -5, 
+        extend   = 0, 
+        gap_char = '-')
+    # Find the best alingment
+    stc_prot_resnums = np.unique(stc_prot.getResnums())
+    stc_prot_missed_residues = missing_elements_from_resnums(
+                                    stc_prot_resnums, 
+                                    len(target_sequence)
+                                )
+    
+    algn1_struc = alignments[0][0]
+    for algn in alignments:
+        algn_s = algn[0]
+        algn_missed_residues = missing_elements_from_aa_sequence(algn_s)
+        if np.all(algn_missed_residues == stc_prot_missed_residues):
+            algn1_struc = algn_s
+            break
+
     # Alignment sequences
-    algn1_struc = alignment[0]
-    algn2_seq = seq_prot
+    algn2_seq   = target_sequence
 
     ''' NEEDED: There should be 10 fields separated by colons ":".
     Please check the file to make sure your sequences end with the '*' character.
@@ -66,25 +107,29 @@ def run_modeller(pdb_file: str,
     https://salilab.org/modeller/8v2/manual/node176.html'''
 
     #  Create the alignment headers
-    struc_header = "structureX:" + crys_file_name + ":.:" + chid + ":.:" + chid + ":.:.:.:"
-    seq_header = "sequence:" + model_file_name + ":.:.:.:.:.:.:.:"
+    struc_header = "structureX:" + crys_base_name + ":.:" + chid + ":.:" + chid + ":.:.:.:"
+    seq_header = "sequence:" + model_base_name + ":.:.:.:.:.:.:.:"
     
     # Create the alignment file
-    alg_filename = file_name + ".alg"
+    alg_filename = base_name + ".alg"
     with open(alg_filename, "w") as handle:
-        handle.write("\n>P1;%s\n%s\n%s*\n>P1;%s\n%s\n%s*\n" % (crys_file_name, struc_header, algn1_struc, 
-                                                               model_file_name, seq_header, algn2_seq))
+        handle.write("\n>P1;%s\n%s\n%s*\n>P1;%s\n%s\n%s*\n" % (
+                crys_base_name, 
+                struc_header, algn1_struc, 
+                model_base_name, seq_header, algn2_seq
+            )
+        )
 
     # Identify the gaps inside the structure sequence
     gaps = find_gaps(algn1_struc, r = num_res_window)
     num_gaps = gaps["num_gaps"]
-    gap_i = gaps["gap_window"]
+    gap_i    = gaps["gap_window"]
     
     if verbose:
-        print("Modelling protein " + file_name)
-        print(seq_cry, seq_prot)
+        print("Modelling protein " + base_name)
+        print('Target sequence\n', target_sequence)
+        print('Input sequence from .pdb file\n', algn1_struc)
         print('*****')
-        print(alignment)
         print(gaps)
     
     # The following string indicates the position of the first gap
@@ -116,7 +161,7 @@ class MyModel(AutoModel):
     # Reads the alignment file
     a = MyModel(env, alnfile = alg_filename, 
                       knowns = pdb_file, 
-                      sequence = model_file_name) 
+                      sequence = model_base_name) 
     # Create just one model
     a.starting_model = 1
     a.ending_model   = 1
@@ -130,8 +175,10 @@ class MyModel(AutoModel):
 
     ###########################
     # These steps will clean the unnecessary files and will rename the output model
-    model_file = glob('./' + file_name + '*.pdb')[0]
-    output_model_file = output_dir + f'/{file_name}_mod.pdb'
+    model_file = glob('./' + model_base_name + '*.pdb')
+    assert len(model_file) == 1 # There should be only one file
+    model_file = model_file[0]
+    # Rename the model file
     os.rename(model_file, output_model_file) 
 
     # Keep the original numbering:
@@ -146,5 +193,6 @@ class MyModel(AutoModel):
         writePDB(output_model_file, ref_model)
 
     # Delete nonuseful files
-    for f in glob(file_name + "*"):
+    os.rename(f'{base_name}.alg', f'{output_dir}/{base_name}.modeller.alg')
+    for f in glob(model_base_name + "*"):
         os.remove(f)
