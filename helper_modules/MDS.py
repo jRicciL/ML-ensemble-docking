@@ -1,7 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.colors as mpltcols
-import matplotlib.patches as mpatches
 from typing import Tuple
 
 def cMDS(D: np.ndarray, 
